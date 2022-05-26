@@ -54,6 +54,9 @@ containers.forEach(container=>{
             container.append(draggable)
             container.classList.remove("dragover")
         }
+        if (parseInt(dragged)!=parseInt(contId)) {
+            container.classList.remove("red")
+        }
 
         
         
@@ -69,5 +72,6 @@ containers.forEach(container=>{
         container.classList.remove("dragover")
         container.classList.remove("red")
     })
+    
     
 })
