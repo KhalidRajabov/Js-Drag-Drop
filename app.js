@@ -3,7 +3,6 @@ const containers = document.querySelectorAll(`.container`)
 
 draggable.forEach(draggable=>{
     draggable.addEventListener("dragstart", _=>{
-        
 
     //Sürüşdürdüyüm elementin opasitisini azaldacaq bir class verirəm ki 
     //bilinsin hansı elementi aparıram.    
@@ -19,7 +18,7 @@ draggable.forEach(draggable=>{
 
 containers.forEach(container=>{
     container.addEventListener("dragover", e=>{
-        e.preventDefault();
+        
         //üstündə olduğum konteynerin bilinməsi
         //üçün class verirəm
         container.classList.add("dragover")
@@ -38,6 +37,12 @@ containers.forEach(container=>{
             //arxa fon verirəm ki başa düşülsün
             //ki o element bura getməz
             container.classList.add("red")
+            console.log(draggable);
+        }
+        else{
+            //Əgər itemi konteynerə salmaq olmursa cursor 
+            //qadağa işarəsində olsun
+            e.preventDefault()
         }
     })
     container.addEventListener("drop", _=>{
