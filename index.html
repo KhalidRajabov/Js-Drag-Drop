@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="app.js" defer></script>
+    <style>
+        .items{
+            width: 80%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        .container{
+            width: 550px;
+            height: 150px;
+            display: inline-flex;
+            margin: auto;
+            opacity: 0.3;
+        }
+        .draggable{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            margin: 15px;
+            width: 70px;
+            height: 70px;
+            
+        }
+        .dragging{
+            opacity: .3;
+        }
+        .one-four{
+            background-color: aqua;
+        }
+        .five-eight{
+            background-color: deeppink;
+        }
+        .six-twelve{
+            background-color: springgreen;
+        }
+        .dragover{
+            opacity: 1;
+        }
+        .gray{
+            background-color: gray;
+        }
+        .black{
+            background-color: black;
+        }
+        .darkolivegreen{
+             background-color: darkolivegreen;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="items">
+        <div id="1" draggable="true" class="draggable one-four"><p>1</p></div>
+        <div id="1" draggable="true" class="draggable one-four"><p>2</p></div>
+        <div id="1" draggable="true" class="draggable one-four"><p>3</p></div>
+        <div id="1" draggable="true" class="draggable one-four"><p>4</p></div>
+        <div id="2" draggable="true" class="draggable five-eight"><p>5</p></div>
+        <div id="2" draggable="true" class="draggable five-eight"><p>6</p></div>
+        <div id="2" draggable="true" class="draggable five-eight"><p>7</p></div>
+        <div id="2" draggable="true" class="draggable five-eight"><p>8</p></div>
+        <div id="3" draggable="true" class="draggable six-twelve"><p>9</p></div>
+        <div id="3" draggable="true" class="draggable six-twelve"><p>10</p></div>
+        <div id="3" draggable="true" class="draggable six-twelve"><p>11</p></div>
+        <div id="3" draggable="true" class="draggable six-twelve"><p>12</p></div>
+    </div>
+
+    <div id="first" class="container gray"></div>
+    <div id="second" class="container black"></div>
+    <div id="third" class="container darkolivegreen"></div>
+</body>
+</html>
